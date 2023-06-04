@@ -18,9 +18,11 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <!-- untuk menghilangkan apa bila dia bukan admin-->
+        @can('admin')
         <a class="nav-link" href="/sisw">siswa</a>
+        @endcan
         <a class="nav-link" href="/user">user</a>
-        <a class="nav-link" href="/admin/user">user</a>
         <a class="nav-link disabled">Disabled</a>
       </div>
     </div>

@@ -2,12 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiswaControllers;  
-use App\Http\Controllers\PostControllers; 
 use App\Http\Controllers\UserControllers; 
 use App\Http\Controllers\LoginController; 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminController;
-
+use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +23,7 @@ Route::get('/', function () {
     return view('login.index');
 });
 
-Route::resource('sisw',SiswaControllers::class);
+Route::resource('sisw',SiswaControllers::class)->middleware('admin');
 Route::resource('user',UserControllers::class)->middleware('auth');
 
 Route::get('/login',[LoginController::class,'index'])->name('login')->middleware('guest');
