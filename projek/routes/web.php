@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiswaControllers;  
 use App\Http\Controllers\PostControllers; 
 use App\Http\Controllers\UserControllers; 
+use App\Http\Controllers\LoginController; 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AdminController;
 
 
 /*
@@ -18,10 +21,18 @@ use App\Http\Controllers\UserControllers;
 */
 
 Route::get('/', function () {
-    return view('template');
+    return view('login.index');
 });
 
 Route::resource('sisw',SiswaControllers::class);
-//Route::resource('post', PostController::class);
-Route::resource('post', 'App\Http\Controllers\PostController');
-Route::resource('user',UserControllers::class);
+Route::resource('user',UserControllers::class)->middleware('auth');
+
+Route::get('/login',[LoginController::class,'index'])->name('login')->middleware('guest');
+Route::post('/login',[LoginController::class,'authenticate']);
+Route::post('/logout',[LoginController::class,'logout']);
+
+Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth');
+//Route::resource('/dasboard/user',UserControllers::class)->except('show'); itu kecuali show ya
+
+Route::resource('/dashboard/user',AdminController::class)->except('show')->middleware('auth');
+

@@ -20,11 +20,37 @@
         <a class="nav-link active" aria-current="page" href="#">Home</a>
         <a class="nav-link" href="/sisw">siswa</a>
         <a class="nav-link" href="/user">user</a>
+        <a class="nav-link" href="/admin/user">user</a>
         <a class="nav-link disabled">Disabled</a>
       </div>
     </div>
   </div>
+
+  <div>
+  @auth
+  <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            welcome back suu,{{ auth()->user()->nama}}
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">my, dashboard</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <form action="/logout"  method="post">
+                @csrf
+                <button type="submit" class="dropdown-item">log out</button>
+            </form>
+            
+          </ul>
+        </li>
+  @else
+  
+  <a class="nav-link" href="/login">login</a>
+  
+  @endauth
+</div>
+
 </nav>
+<h1>halo </h1> 
     @yield('content')
 </div>
 
