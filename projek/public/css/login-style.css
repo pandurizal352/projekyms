@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Lato&family=Poppins:wght@400;500;600;700&display=swap');
+
+body{
+    font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hello {
+    height: 100%;
+    background-image: url(../images/holdings.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+.wrapper {
+    height: 100vh;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+.container-fluid {
+    box-sizing: border-box;
+    padding: 0;
+}
+.blue-font {
+    color: #0A1B59;
+}
+.welcome {
+    margin-top: 5em;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 15px;
+    padding: 8px;
+    font-weight: 700;
+    line-height: 21px;
+    width: 130px;
+    color: #113FE2;
+    letter-spacing: 1px;
+    background-color: rgba(17,63,226,0.1);
+}
+.main-wrapper{
+    box-sizing: border-box;
+}
+.tagline{
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.3em;
+    line-height: 66px;
+    color: #0A1B59;
+}
+.input {
+    border-radius: 5px;
+    border-style: none;
+    height: 37px;
+    font-size: 12px;
+}
+.input:focus {
+    border-radius: 5px;
+    border-style: none;
+    height: 37px;
+    outline: none;
+}
+.login-container {
+    color: #0A1B59;
+    background-color: rgba(17,63,226,0.1);
+    text-align: center;
+    width: 22em;
+    height: 30em;
+    border: 2px solid rgba(17,63,226,0.1);
+}
+.label {
+    letter-spacing: .8px;
+    text-align: start;
+    font-size: 12px;
+}
+.description {
+    color:  rgba(10, 27, 89, 0.6);
+}
+.btn-login {
+    width: 120px;
+    height: 40px;
+    background-color: #113FE2;
+    color: white;
+    border-style: none;
+}
+.fa-regular{
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    cursor: pointer;
+}
+.input-container{
+    background-color: white;
+    padding: 0 8px 0 8px;
+    border-radius: 5px;
+}
+@media screen and (max-width: 600px){
+    .hello{
+        height: 40%;
+    }
+    .tagline{
+        font-size: 3em;
+    }
+}

@@ -21,7 +21,7 @@ use GuzzleHttp\Middleware;
 */
 
 Route::get('/', function () {
-    return view('login.index');
+    return view('main-interface.login-landing');
 });
 
 Route::resource('sisw',SiswaControllers::class)->middleware('admin');
