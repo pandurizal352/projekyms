@@ -32,7 +32,7 @@ Route::post('/login',[LoginController::class,'authenticate']);
 Route::post('/logout',[LoginController::class,'logout']);
 
 Route::get('/change-password',[UserControllers::class,'ChangePassword'])->middleware('auth');;
-Route::post('/change-password',[UserControllers::class,'ProsesChangePassword'])->middleware('auth');;
+Route::post('/change-password',[UserControllers::class,'ProsesChangePassword'])->middleware('auth');
 
 Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth');
 //Route::resource('/dasboard/user',UserControllers::class)->except('show'); itu kecuali show ya
