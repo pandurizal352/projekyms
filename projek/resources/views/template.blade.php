@@ -23,6 +23,7 @@
         <a class="nav-link" href="/sisw">siswa</a>
         @endcan
         <a class="nav-link" href="/user">user</a>
+        <a class="nav-link" href="/change-password">ubah password</a>
         <a class="nav-link disabled">Disabled</a>
       </div>
     </div>
