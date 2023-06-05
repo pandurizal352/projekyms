@@ -12,7 +12,7 @@ class LoginController extends Controller
      */
     public function index()
     {
-        return view('login.index',[
+        return view('main-interface.login-landing',[
             'title' => 'Login',
             'active'=> 'login'
         ]);

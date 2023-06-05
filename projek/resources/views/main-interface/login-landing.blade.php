@@ -34,20 +34,28 @@
     </div>
     <div class="login-container position-absolute top-50 start-50 translate-middle bg-light rounded-2">
       <i class="fa-regular fa-circle-xmark"></i>
-      <form action="" class="d-flex flex-column justify-content-center p-5 mt-5">
+      
+      <form action="/"  method="post" class="d-flex flex-column justify-content-center p-5 mt-5">
+        @csrf
         <h2>Login</h2>
         <div class=" d-flex flex-column row-gap-3 mt-3">
           <div class="input-container d-flex align-items-center column-gap-2">
             <i class="fa-solid fa-user"></i>
-            <input type="text" name="NIM" id="NIM" class="input">
+            <input type="email" name="email" class="input @error('email') is-invalid @enderror" placeholder="name@example.com" autofocus required value="{{old('email')}}">
+            @error('email')
+                    <div class='invalid-feddback'>
+                        {{$message}}    
+                    </div
+            @enderror
           </div>
           <div class="input-container d-flex align-items-center column-gap-2">
             <i class="fa-solid fa-lock"></i>
-            <input type="password" name="Password" id="Password" class="input">
+            <input type="password" name="password" id="Password" class="input" placeholder="Password" required>
           </div>
           <button type="submit" class="btn-login w-100 rounded-1">Login</button>
         </div>
       </form>
+
     </div>
     <script src="{{asset('js/main.js')}}"></script>
 </body>

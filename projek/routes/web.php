@@ -20,15 +20,13 @@ use GuzzleHttp\Middleware;
 |
 */
 
-Route::get('/', function () {
-    return view('main-interface.login-landing');
-});
+
 
 Route::resource('sisw',SiswaControllers::class)->middleware('admin');
 Route::resource('user',UserControllers::class)->middleware('auth');
 
-Route::get('/login',[LoginController::class,'index'])->name('login')->middleware('guest');
-Route::post('/login',[LoginController::class,'authenticate']);
+Route::get('/',[LoginController::class,'index'])->name('login')->middleware('guest');
+Route::post('/',[LoginController::class,'authenticate']);
 Route::post('/logout',[LoginController::class,'logout']);
 
 Route::get('/change-password',[UserControllers::class,'ChangePassword'])->middleware('auth');;
