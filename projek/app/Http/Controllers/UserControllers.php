@@ -103,4 +103,32 @@ class UserControllers extends Controller
 
         return redirect()->route('user.index')->with('succes','User Berhasil di Hapus');
     }
+
+    public function ChangePassword()
+    {
+        return view('change-password');
+    }
+
+    public function ProsesChangePassword(Request $request)
+    {
+        //cek passwordd nya
+        $cek = Hash::check($request->old_password, auth()->user()->password);
+        if(!$cek){
+            return back()->with('error','password lama gak sama ama akun nya');
+        }
+
+        //cek password baru dengan confirm
+        $cek2 = $request->New_password == $request->Reapet_password;
+        
+        if(!$cek2){
+            return back()->with('error','password baru sama konfersi password nya gak sama');
+        }
+
+        auth()->user()->update([
+            'password' => Hash::make($request->New_password)
+        ]);
+
+        return view('login.index');
+
+    }
 }
