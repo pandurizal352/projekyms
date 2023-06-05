@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Lato&family=Poppins:wght@400;500;600;700&display=swap');
+
+body{
+    font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hello {
+    height: 100%;
+    background-image: url(../images/invest.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+.wrapper {
+    height: 100vh;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+.container-fluid {
+    box-sizing: border-box;
+    padding: 0;
+}
+.input-field{
+    display: flex;
+    column-gap: 70px;
+}
+.input-field-2{
+    display: flex;
+    column-gap: 22px;
+}
+.blue-font {
+    color: #0A1B59;
+}
+.welcome {
+    margin-top: 5em;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 15px;
+    padding: 8px;
+    font-weight: 700;
+    line-height: 21px;
+    width: 130px;
+    color: #113FE2;
+    letter-spacing: 1px;
+    background-color: rgba(17,63,226,0.1);
+}
+.main-wrapper{
+    box-sizing: border-box;
+    padding-right: 30%;
+}
+.tagline{
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 66px;
+    color: #0A1B59;
+}
+.input {
+    border-radius: 10px;
+}

@@ -36,15 +36,11 @@
             <td>{{ $User->email}}</td>
             <td>{{ $User->password}}</td>
             <td class="text-center">
-                <form action="{{ route('user.destroy',$User->id) }}" method="POST">
-
-                   <a class="btn btn-info btn-sm" href="{{ route('user.show',$User->id) }}">Show</a>
-
+                <form action="{{ route('user.destroy',$User->id) }}" method="POST" class="d-flex">
+                    <a class="btn btn-info btn-sm" href="{{ route('user.show',$User->id) }}">Show</a>
                     <a class="btn btn-primary btn-sm" href="{{ route('user.edit',$User->id) }}">Edit</a>
-
                     @csrf
                     @method('DELETE')
-
                     <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
                 </form>
             </td>
