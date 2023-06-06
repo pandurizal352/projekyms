@@ -53,6 +53,7 @@ body{
     border-radius: 5px;
     border-style: none;
     height: 37px;
+    width: 100%;
     font-size: 12px;
 }
 .input:focus {

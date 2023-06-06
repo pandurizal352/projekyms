@@ -55,6 +55,10 @@
           <div class="input-container d-flex align-items-center column-gap-2">
             <i class="fa-solid fa-lock"></i>
             <input type="password" name="password" id="Password" class="input" placeholder="Password" required>
+            <div class="password-hide-icon">
+              <i class="fa-solid fa-eye-slash"></i>
+              <i class="fa-solid fa-eye d-none"></i>
+            </div>
           </div>
           <button type="submit" class="btn-login w-100 rounded-1">Login</button>
         </div>
