@@ -15,8 +15,11 @@
   <body>
     <div class="container-fluid overflow-x-hidden">
       <div class="wrapper d-flex flex-column-reverse flex-md-row pb-md-0">
-        <div class="col-md-8 py-md-5 ps-4">
-          <h5 class="blue-font d-none d-md-block fw-bold fs-5"><i>YukMelekSaham.</i></h5>
+        <div class="col-md-8 py-md-4 ps-4">
+          <div class="d-none d-md-flex align-items-center">
+            <img src="/images/logo.png" alt="" style="width:3.4em;" class="rounded">
+            <h5 class="blue-font fw-bold fs-6"><u>Jago</u><span class="invest-text rounded ms-1">Investasi</span></h5>
+          </div>
           <div class="main-wrapper">
             <div class="welcome">Welcome</div>
             <h1 class="tagline">Pelajari, Investasi, Raih Kebebasan Finansial!</h1>
@@ -26,8 +29,9 @@
           </div>
         </div>
         <div class="hello col-md-4 pt-3">
-          <div class="d-md-none">
-            <h5 class="d-md-none"><i>YukMelekSaham.</i></h5>
+          <div class="d-md-none d-flex align-items-center column-gap-2">
+            <img src="/images/logo.png" alt="" style="width:40px; background-color:white;" class="rounded">
+            <h5 class="d-md-none mt-2"><u>Jago</u><span class="invest-text rounded-1">Investasi</span></h5>
           </div>
         </div>
       </div>    

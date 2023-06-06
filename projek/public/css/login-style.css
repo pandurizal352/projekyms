@@ -80,7 +80,8 @@ body{
 .btn-login {
     width: 120px;
     height: 40px;
-    background-color: #113FE2;
+    background: rgb(17,63,226);
+    background: linear-gradient(124deg, rgba(17,63,226,1) 39%, rgba(0,168,255,1) 97%);
     color: white;
     border-style: none;
 }
@@ -94,6 +95,11 @@ body{
     background-color: white;
     padding: 0 8px 0 8px;
     border-radius: 5px;
+}
+.invest-text{
+    background-color: #113FE2;
+    color: white;
+    padding:3px 8px 3px 8px;
 }
 @media screen and (max-width: 600px){
     .hello{
