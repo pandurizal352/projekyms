@@ -47,13 +47,24 @@
             <input type="email" name="email" class="form-control" placeholder="Email" required="">
             </div>
         </div>
+
         <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <label><i class="fa fa-key"></i> Password</label>
             <input type="password" name="password" class="form-control" placeholder="Password" required="">
+            
         </div>
         </div>
-       
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            
+            <label><i class="fa fa-key"></i> Role</label>
+            <input type="text" name="role" class="form-control "   placeholder="role" required="">
+        </div>
+        </div>
+
+
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
