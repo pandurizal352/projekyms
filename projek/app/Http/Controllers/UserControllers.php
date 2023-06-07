@@ -43,6 +43,7 @@ class UserControllers extends Controller
             'nama' => 'required',
             'email' => 'required',
             'password' => 'required',
+            'role' => 'required',
         ]);
         User::create($request->all());
 
@@ -85,6 +86,7 @@ class UserControllers extends Controller
             'nama' => 'required',
             'email' => 'required',
             'password' => 'required',
+            'role' => 'required',
         ]);
 
         $user->update($request->all());

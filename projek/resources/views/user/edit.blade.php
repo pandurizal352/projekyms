@@ -52,6 +52,12 @@
                 <input type="password" class="form-control"  name="password"  value="" placeholder="Content"></textarea>
             </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>role</strong>
+                <input type="text" class="form-control"  name="role"  value="" placeholder="user = 0 admmin= 1"></textarea>
+            </div>
+        </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
             <button type="submit" class="btn btn-primary">Update</button>
         </div>
