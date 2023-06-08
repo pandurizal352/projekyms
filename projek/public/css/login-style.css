@@ -86,6 +86,29 @@ body{
     color: white;
     border-style: none;
 }
+.btn-login-2 {
+    width: 120px;
+    height: 40px;
+    background: rgb(17,63,226);
+    background: linear-gradient(124deg, rgba(17,63,226,1) 39%, rgba(0,168,255,1) 97%);
+    color: white;
+    border-style: none;
+}
+.animate{
+    animation-name: btn-animation;
+    animation-duration: .5s;
+}
+@keyframes btn-animation{
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 .fa-regular{
     position: absolute;
     right: 1em;

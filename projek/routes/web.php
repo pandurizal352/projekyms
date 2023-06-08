@@ -6,7 +6,6 @@ use App\Http\Controllers\UserControllers;
 use App\Http\Controllers\LoginController; 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminController;
-
 use GuzzleHttp\Middleware;
 
 /*
@@ -26,6 +25,9 @@ Route::resource('sisw',SiswaControllers::class)->middleware('admin');
 Route::resource('user',UserControllers::class)->middleware('auth');
 
 Route::get('/',[LoginController::class,'index'])->name('login')->middleware('guest');
+Route::get('/Courses',function(){
+    return view('main-interface.main-course');
+});
 Route::post('/',[LoginController::class,'authenticate']);
 Route::post('/logout',[LoginController::class,'logout']);
 

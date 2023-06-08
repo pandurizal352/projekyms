@@ -24,4 +24,17 @@ $(document).ready(function(){
             $("#Password").attr('type', 'password');
         }
     })
+    $('.btn-login').on('click',()=>{
+        animate('.btn-login')
+    })
+    $('.btn-login-2').on('click',()=>{
+        animate('.btn-login-2')
+    })
 })
+
+const animate = (btnClass)=>{
+    $(btnClass).addClass('animate');
+    setTimeout(()=>{
+        $(btnClass).removeClass('animate');
+    },600)
+}
