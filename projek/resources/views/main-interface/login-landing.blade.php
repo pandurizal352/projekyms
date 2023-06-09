@@ -28,7 +28,7 @@
             <button class="btn-login mb-5 rounded">Join us!</button>
           </div>
         </div>
-        <div class="hello col-md-4 pt-3">
+        <div class="mobile-title col-md-4 pt-3">
           <div class="d-md-none d-flex align-items-center column-gap-2">
             <img src="/images/logo.png" alt="" style="width:40px; background-color:white;" class="rounded">
             <h5 class="d-md-none mt-2"><u>Jago</u><span class="invest-text rounded-1">Investasi</span></h5>
