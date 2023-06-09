@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Yuk-Melek-Saham||Login</title>
+    <title>Jago Investasi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -28,7 +28,7 @@
             <button class="btn-login mb-5 rounded">Join us!</button>
           </div>
         </div>
-        <div class="hello col-md-4 pt-3">
+        <div class="mobile-title col-md-4 pt-3">
           <div class="d-md-none d-flex align-items-center column-gap-2">
             <img src="/images/logo.png" alt="" style="width:40px; background-color:white;" class="rounded">
             <h5 class="d-md-none mt-2"><u>Jago</u><span class="invest-text rounded-1">Investasi</span></h5>
@@ -60,7 +60,7 @@
               <i class="fa-solid fa-eye d-none"></i>
             </div>
           </div>
-          <button type="submit" class="btn-login w-100 rounded-1">Login</button>
+          <button type="submit" class="btn-login-2 w-100 rounded-1">Login</button>
         </div>
       </form>
 

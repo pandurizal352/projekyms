@@ -133,5 +133,7 @@ class UserControllers extends Controller
 
         return view('main-interface.login-landing')->with('sukses','password berhasil di ubah silahkan login kembali');
 
+
+
     }
 }
