@@ -10,7 +10,14 @@ body{
     font-family: 'Lato', sans-serif;
     font-family: 'Poppins', sans-serif;
 }
-
+/* Footer */
+footer {
+    border-top: 2px solid var(--description-color);
+    position: relative;
+    margin: auto;
+    margin-top: 10em;
+    width: 88%;
+}
 .mobile-title {
     height: 100%;
     background-image: url(../images/holdings.png);
@@ -30,6 +37,19 @@ body{
 }
 .blue-font {
     color: #0A1B59;
+}
+.list {
+    text-decoration: none;
+    list-style-type: none;
+    letter-spacing: .8px;
+    font-weight: 600;
+    right: 1.3em;
+    top: 5em;
+    z-index: 100;
+}
+.list li {
+    cursor: pointer;
+    margin-top: 10px;
 }
 .welcome {
     margin-top: 5em;
@@ -239,5 +259,17 @@ body{
     .user-profile{
         width: 86%;
         bottom: -7rem;
+    }
+    .list {
+        position: absolute!important;
+        background-color:white;
+        box-shadow: -1px 20px 27px -3px rgba(0,0,0,0.46);
+        -webkit-box-shadow: -1px 20px 27px -3px rgba(0,0,0,0.46);
+        -moz-box-shadow: -1px 20px 27px -3px rgba(0,0,0,0.46);    
+        padding: 1.6em;
+        color: #0A1B59;
+        right: 1.4em;
+        top: 4em;
+        border-radius: .3em;
     }
 }
