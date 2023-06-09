@@ -131,7 +131,7 @@ class UserControllers extends Controller
             'password' => Hash::make($request->New_password)
         ]);
 
-        return view('login.index');
+        return view('main-interface.login-landing')->with('sukses','password berhasil di ubah silahkan login kembali');
 
     }
 }
