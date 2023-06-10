@@ -4,10 +4,6 @@ $(document).ready(function(){
         $('.login-container').fadeToggle()
     })
 
-    $(".list").hide()
-    $(".fa-ellipsis").on('click',()=>{
-        $(".list").fadeToggle()
-    })
     // fa-regular click
     $('.fa-regular').on('click',()=>{
         $('.login-container').fadeOut();

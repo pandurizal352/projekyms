@@ -10,26 +10,15 @@
     <link rel="stylesheet" href="/css/login-style.css">
     <script src="{{asset('js/code.jquery.com_jquery-3.7.0.js')}}"></script>
     <script src="https://kit.fontawesome.com/022d6e0ae6.js" crossorigin="anonymous"></script>
-    <title>Jago Investasi</title>
+    <title>Jago Investasi | Course</title>
 </head>
 <body>
     <div class="container-fluid">
         <head>
-            <div class="d-flex position-relative align-items-center justify-content-between p-4">
-                <div class="logo d-flex align-items-center">
-                    <img src="/images/logo.png" alt="" style="width:3.4em;" class="rounded">
-                    <h5 class="blue-font fw-bold fs-6"><u>Jago</u><span class="invest-text rounded ms-1">Investasi</span></h5>
-                </div>
-                <ul class="list position-static d-md-flex gap-4 align-items-center blue-font">
-                    <li>Courses</li>
-                    <li>Profile</li>
-                    <li>About</li>
-                    <li><button class="col-md btn-login-2 rounded-1" style="background-image: linear-gradient(to right, #f9c817, #facd1c, #fbd120, #fcd625, #fddb29);">LogOut      <i class="fa-solid fa-right-from-bracket"></i></button></li>
-                </ul>
-                <i class="fa-solid fa-ellipsis fa-xl d-md-none"></i>
+            <div class="d-flex align-items-center p-4">
+                <img src="/images/logo.png" alt="" style="width:3.4em;" class="rounded">
+                <h5 class="blue-font fw-bold fs-6"><u>Jago</u><span class="invest-text rounded ms-1">Investasi</span></h5>
             </div>
-        </head>
-        <main class="mb-5">
             <div class="bg-profile">
                 <h2 class="profile-text text-light">Profile.</h2>
                 <div class="user-profile">
@@ -38,7 +27,7 @@
                         <input type="file" id="file">
                         <label for="file" class="upload-picture-btn d-none"><i class="fa-solid fa-camera fa-beat"></i></label>
                     </div>
-                    <h2 class="greetings-1 blue-font">Halo, <span class="time"></span></h2>
+                    <h2 class="greetings-1">Halo, <span class="time"></span></h2>
                     <div class="greetings">
                         <h2 class="typing"> ${Nama Mahasiswa}</h2>
                     </div>
@@ -48,11 +37,12 @@
                     </div>
                 </div>
             </div>
-        </main>
-        <footer>
+        </head>
+        <main>
 
-        </footer>
+        </main>
     </div>
+
     <script src="{{asset('js/main.js')}}"></script>
 </body>
 </html>
