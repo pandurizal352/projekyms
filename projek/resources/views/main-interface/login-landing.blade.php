@@ -25,7 +25,7 @@
             <h1 class="tagline">Pelajari, Investasi, Raih Kebebasan Finansial!</h1>
             <p class="description">"Ungkap potensi keuntungan pasar saham dengan Yuk Melek Saham. Pelajari strategi, analisis, dan manajemen risiko untuk kebebasan finansial Anda."</p>
             <p class="description">LogIn sekarang untuk akses modul pembelajaran!</p>
-            <button class="btn-login mb-5 rounded">Join us!</button>
+            <button class="btn-login mb-5 rounded fw-semibold">Join us!</button>
           </div>
         </div>
         <div class="mobile-title col-md-4 pt-3">
@@ -41,7 +41,7 @@
       
       <form action="/"  method="post" class="d-flex flex-column justify-content-center p-5 mt-5">
         @csrf
-        <h2>Login</h2>
+        <h2 class="login-text fw-semibold">Login</h2>
         <div class=" d-flex flex-column row-gap-3 mt-3">
           <div class="input-container d-flex align-items-center column-gap-2">
             <i class="fa-solid fa-user"></i>
@@ -60,7 +60,7 @@
               <i class="fa-solid fa-eye d-none"></i>
             </div>
           </div>
-          <button type="submit" class="btn-login-2 w-100 rounded-1">Login</button>
+          <button type="submit" class="btn-login-2 w-100 rounded-1 fw-semibold">Login</button>
         </div>
       </form>
 
