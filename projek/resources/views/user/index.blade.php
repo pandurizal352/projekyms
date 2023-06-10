@@ -27,7 +27,6 @@
     <table class="table table-bordered">
         <tr>
             <th width="20px" class="text-center">No</th>
-            <th width="280px"class="text-center">image</th>
             <th>Nim</th>
             <th width="280px"class="text-center">Nama User</th>
             <th width="280px"class="text-center">email</th>
@@ -38,19 +37,6 @@
         @foreach ($user as $User)
         <tr>
             <td class="text-center">{{ ++$i }}</td>
-            <td>
-                @if($User->image)
-                <div style="max-height:350px; overflow:hidden;">
-                    <img src="{{asset('storage/' . $User->image)}}" class="img-fluid mt-3">
-                </div>
-                
-                @else
-                <div style="max-height:350px; overflow:hidden;">
-                <img src="/images/60111.jpg" class="img-fluid mt-3">
-                </div>
-                
-                @endif
-            </td>
             <td>{{ $User->Nim }}</td>
             <td>{{ $User->nama }}</td>
             <td>{{ $User->email}}</td>

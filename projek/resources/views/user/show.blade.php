@@ -15,16 +15,6 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                @if($user->image)
-                <img src="{{asset('storage/' . $user->image)}}" class="img-fluid mt-3" style="height: 120px;">
-                @else
-                <img src="/images/60111.jpg" class="img-fluid mt-3" style="height: 120px;">
-                @endif
-                
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
                 <strong>Nim:</strong>
                 {{ $user->Nim }}
             </div>
@@ -47,6 +37,5 @@
                 {{ $user->role }}
             </div>
         </div>
-        
     </div>
 @endsection
