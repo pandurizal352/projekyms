@@ -15,32 +15,27 @@
 <body>
     <div class="container-fluid">
         <head>
-            <div class="d-flex align-items-center p-4">
-                <img src="/images/logo.png" alt="" style="width:3.4em;" class="rounded">
-                <h5 class="blue-font fw-bold fs-6"><u>Jago</u><span class="invest-text rounded ms-1">Investasi</span></h5>
-            </div>
-            <div class="bg-profile">
-                <h2 class="profile-text text-light">Profile.</h2>
-                <div class="user-profile">
-                    <div class="pp-container position-relative d-flex flex-column">
-                        <img src="/images/60111.jpg" alt="Profile Picture" class="profile-picture">
-                        <input type="file" id="file">
-                        <label for="file" class="upload-picture-btn d-none"><i class="fa-solid fa-camera fa-beat"></i></label>
-                    </div>
-                    <h2 class="greetings-1">Halo, <span class="time"></span></h2>
-                    <div class="greetings">
-                        <h2 class="typing"> ${Nama Mahasiswa}</h2>
-                    </div>
-                    <div class="mt-4 row gap-4 row-gap-3 justify-content-center">
-                        <button class="col-md btn-login rounded-1" style="width:200px!important;">Ubah Password   <i class="fa-solid fa-lock"></i></button>
-                        <button class="col-md btn-login-2 rounded-1" style="background-image: linear-gradient(to right, #f9c817, #facd1c, #fbd120, #fcd625, #fddb29);">LogOut      <i class="fa-solid fa-right-from-bracket"></i></button>
-                    </div>
+
+            <div class="d-flex position-relative align-items-center justify-content-between p-4">
+                <div class="logo d-flex align-items-center">
+                    <img src="/images/logo.png" alt="" style="width:3.4em;" class="rounded">
+                    <h5 class="blue-font fw-bold fs-6 hover:none"><a href="/" class="link-style"><u>Jago</u><span class="invest-text rounded ms-1">Investasi</span></a></h5>
                 </div>
+                <ul class="list position-static d-md-flex gap-4 align-items-center blue-font">
+                    <li class="list-child active">Courses</li>
+                    <li class="list-child">Profile</li>
+                    <li class="list-child">About</li>
+                    <li><button class="col-md btn-login-2 rounded-1 fw-semibold" style="background-image: linear-gradient(to right, #f9c817, #facd1c, #fbd120, #fcd625, #fddb29);">LogOut      <i class="fa-solid fa-right-from-bracket"></i></button></li>
+                </ul>
+                <i class="fa-solid fa-ellipsis fa-xl d-md-none"></i>
             </div>
         </head>
-        <main>
-
+        <main class="mb-5">
         </main>
+        <footer>
+            <img src="" alt="">
+        </footer>
+
     </div>
 
     <script src="{{asset('js/main.js')}}"></script>
