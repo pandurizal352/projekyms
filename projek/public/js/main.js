@@ -57,17 +57,8 @@ $(document).ready(function(){
       } else {
         $(".time").html("Selamat Malam");
       }
-
-
-    // List Child
-    $('.list-child').on('click',function(){
-        $('.list-child').removeClass('active')
-        $(this).addClass('active');
-        if($(this).val("Profile")){
-            $("main").load("../../resources/views/main-interface/profile.blade.php #profile")
-        }
-    });
-    
+      const valueSelect = document.getElementsByTagName('select')[0].value;
+      console.log(valueSelect)
 })
 
 // Button Animate

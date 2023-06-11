@@ -12,7 +12,8 @@ body{
     background-color: #f6f8fd;;
 }
 .link-style:hover {
-    color:#0A1B59;
+    color:#113FE2;
+    text-decoration: none;
 }
 .link-style{
     color: #0A1B59;

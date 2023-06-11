@@ -25,8 +25,15 @@ Route::resource('sisw',SiswaControllers::class)->middleware('admin');
 Route::resource('user',UserControllers::class)->middleware('auth');
 
 Route::get('/',[LoginController::class,'index'])->name('login')->middleware('guest');
-Route::get('/Courses',function(){
-    return view('main-interface.main-course');
+Route::get('/profile',function(){
+    return view('main-interface.profile',[
+        "title" => "Profile"
+    ]);
+});
+Route::get('/course',function(){
+    return view('main-interface.course',[
+        "title" => "Course"
+    ]);
 });
 Route::post('/',[LoginController::class,'authenticate']);
 Route::post('/logout',[LoginController::class,'logout']);

@@ -14,7 +14,7 @@ class LoginController extends Controller
     {
         return view('main-interface.login-landing',[
             'title' => 'Login',
-            'active'=> 'login'
+            'active' => 'login',
         ]);
     }
 
