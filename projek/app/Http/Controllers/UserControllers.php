@@ -11,11 +11,17 @@ use Illuminate\Support\Facades\Storage;
 class UserControllers extends Controller
 {   
     
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+   
+    public function toProfile()
     {
+        $user1 = auth()->user()->image;
+        return view('main-interface.profile',[
+            "title" => "Profile",
+            "user" => $user1,
+        ]);
+    }
+    public function index()
+    {   
         $user = User::latest()->paginate(5);
         return view ('user.index',compact('user'))->with('i', (request()->input('page', 1) -1) * 5);
     }

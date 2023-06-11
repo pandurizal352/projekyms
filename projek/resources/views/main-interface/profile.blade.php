@@ -5,13 +5,20 @@
     <h2 class="profile-text text-light">TEST Profile.</h2>
     <div class="user-profile">
         <div class="pp-container position-relative d-flex flex-column">
-            <img src="/images/60111.jpg" alt="Profile Picture" class="profile-picture">
+
+            <!-- <img src="/images/60111.jpg" alt="Profile Picture" class=""> -->
+            @if($user)
+                <img src="{{asset('storage/' . $user)}}" class="profile-picture" alt="Profile Picture">
+                @else
+                <img src="/images/60111.jpg" class="profile-picture" alt="Profile Picture">
+                @endif
+            
             <input type="file" id="file">
             <label for="file" class="upload-picture-btn d-none"><i class="fa-solid fa-camera fa-beat"></i></label>
         </div>
         <h2 class="greetings-1 blue-font fw-semibold">Halo, <span class="time"></span></h2>
         <div class="greetings">
-            <h2 class="typing"> ${Nama Mahasiswa}</h2>
+            <h2 class="typing"> {{ auth()->user()->nama}}</h2>
         </div>
         <div class="mt-4 row gap-4 row-gap-3 justify-content-center">
             <button class="col-md btn-login rounded-1 fw-semibold" style="width:200px!important;">Ubah Password   <i class="fa-solid fa-lock"></i></button>

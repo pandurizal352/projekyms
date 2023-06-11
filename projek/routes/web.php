@@ -27,22 +27,15 @@ Route::resource('user',UserControllers::class)->middleware('auth');
 //Route::resource('user',UserControllers::class);
 
 Route::get('/',[LoginController::class,'index'])->name('login')->middleware('guest');
-Route::get('/profile',function(){
-    return view('main-interface.profile',[
-        "title" => "Profile"
-    ]);
-});
-Route::get('/course',function(){
-    return view('main-interface.course',[
-        "title" => "Course"
-    ]);
-});
+
+
 Route::post('/',[LoginController::class,'authenticate']);
 Route::post('/logout',[LoginController::class,'logout']);
 
 Route::get('/change-password',[UserControllers::class,'ChangePassword'])->middleware('auth');;
 Route::post('/change-password',[UserControllers::class,'ProsesChangePassword'])->middleware('auth');
 
+Route::get('/profile',[UserControllers::class,'toProfile'])->middleware('auth');
 Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth');
 //Route::resource('/dasboard/user',UserControllers::class)->except('show'); itu kecuali show ya
 

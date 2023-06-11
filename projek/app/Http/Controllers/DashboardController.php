@@ -8,6 +8,11 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view ('template');
+        return view('main-interface.course',[
+            "title" => "Course",
+        ]);
     }
+
+    
+
 }
