@@ -49,7 +49,7 @@
             @error('email')
                     <div class='invalid-feddback'>
                         {{$message}}    
-                    </div
+                    </div>
             @enderror
           </div>
           <div class="input-container d-flex align-items-center column-gap-2">

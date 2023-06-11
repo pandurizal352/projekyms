@@ -6,6 +6,7 @@ use App\Http\Controllers\UserControllers;
 use App\Http\Controllers\LoginController; 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\VideoControllers;
 use GuzzleHttp\Middleware;
 
 /*
@@ -36,7 +37,8 @@ Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth'
 //Route::resource('/dasboard/user',UserControllers::class)->except('show'); itu kecuali show ya
 
 Route::get('/Courses',function(){
-    return view('main-interface.main-course');
+    return view('main-interface.profile');
 });
 
-
+Route::resource('/video',VideoControllers::class);
+//Route::get('/video',VideoController::class);
