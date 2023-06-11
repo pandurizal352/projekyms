@@ -21,6 +21,10 @@
         <div class="main">
         <form action="change-password" method="post" class="w-50">
             @csrf
+
+            @if(session('error'))
+                <div class="alert alert-danger">{{session('error')}}</div>
+            @endif
             <div class="mb-3">
                 <label for="OldPassword" >Old Password</label>
                 <input type="password" class="form-control" id="oldpassword" name="old_password" class="">

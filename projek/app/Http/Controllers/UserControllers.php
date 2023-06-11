@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
+
 
 class UserControllers extends Controller
 {   
@@ -37,15 +39,24 @@ class UserControllers extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $request->validate([
+       
+        // return $request->file('image')->store('post-images');
+
+       $validatedData = $request->validate([
             'Nim' => 'required',
             'nama' => 'required',
             'email' => 'required',
             'password' => 'required',
+            'image' => 'image|file|max:1024',
             'role' => 'required',
         ]);
-        User::create($request->all());
+        //memasukan gambar ke dlam file post-images
+        if($request->file('image')){
+            $validatedData['image'] = $request->file('image')->store('post-images');
+        }
+        
+        User::create($validatedData);
+       //User::create($request->all());
 
         return redirect()->route('user.index')->with('succes','Data Berhasil di Input');
     }
@@ -81,15 +92,24 @@ class UserControllers extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $request->validate([
+        $validatedData =  $request->validate([
             'Nim' => 'required',
             'nama' => 'required',
             'email' => 'required',
             'password' => 'required',
+            'image' => 'image|file|max:1024',
             'role' => 'required',
         ]);
 
-        $user->update($request->all());
+        if($request->file('image')){
+            if($request->oldImage){
+                Storage::delete($request->oldImage);    
+            }
+            $validatedData['image'] = $request->file('image')->store('post-images');
+        }
+
+          $user->update($validatedData);
+        //$user->update($request->all());
 
         return redirect()->route('user.index')->with('succes','User Berhasil di Update');
     }
@@ -102,6 +122,9 @@ class UserControllers extends Controller
      */
     public function destroy(User $user)
     {
+        if($user->image){
+            Storage::delete($user->image);    
+        }
         $user->delete();
 
         return redirect()->route('user.index')->with('succes','User Berhasil di Hapus');
@@ -131,7 +154,9 @@ class UserControllers extends Controller
             'password' => Hash::make($request->New_password)
         ]);
 
-        return view('main-interface.login-landing');
+        return view('main-interface.login-landing')->with('sukses','password berhasil di ubah silahkan login kembali');
+
+
 
     }
 }

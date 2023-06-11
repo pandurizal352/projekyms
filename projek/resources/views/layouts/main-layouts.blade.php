@@ -12,6 +12,7 @@
     <script src="{{asset('js/code.jquery.com_jquery-3.7.0.js')}}"></script>
     <script src="https://kit.fontawesome.com/022d6e0ae6.js" crossorigin="anonymous"></script>
     <title>Jago Investasi | {{ $title }}</title>
+
 </head>
 <body>
     <div class="container-fluid">
@@ -24,7 +25,9 @@
         <footer id="Footer">
             <img src="" alt="">
         </footer>
+
     </div>
+
     <script src="{{asset('js/main.js')}}"></script>
 </body>
 </html>

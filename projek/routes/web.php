@@ -6,6 +6,7 @@ use App\Http\Controllers\UserControllers;
 use App\Http\Controllers\LoginController; 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\VideoControllers;
 use GuzzleHttp\Middleware;
 
 /*
@@ -23,6 +24,7 @@ use GuzzleHttp\Middleware;
 
 Route::resource('sisw',SiswaControllers::class)->middleware('admin');
 Route::resource('user',UserControllers::class)->middleware('auth');
+//Route::resource('user',UserControllers::class);
 
 Route::get('/',[LoginController::class,'index'])->name('login')->middleware('guest');
 Route::get('/profile',function(){
@@ -44,5 +46,9 @@ Route::post('/change-password',[UserControllers::class,'ProsesChangePassword'])-
 Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth');
 //Route::resource('/dasboard/user',UserControllers::class)->except('show'); itu kecuali show ya
 
+Route::get('/Courses',function(){
+    return view('main-interface.profile');
+});
 
-
+Route::resource('/video',VideoControllers::class);
+//Route::get('/video',VideoController::class);

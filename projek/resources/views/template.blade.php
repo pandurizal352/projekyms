@@ -24,7 +24,10 @@
         @endcan
         <a class="nav-link" href="/user">user</a>
         <a class="nav-link" href="/change-password">ubah password</a>
-        <a class="nav-link disabled">Disabled</a>
+        <form action="/logout"  method="post">
+                @csrf
+                <button type="submit" class="dropdown-item">log out</button>
+            </form>
       </div>
     </div>
   </div>
@@ -53,7 +56,7 @@
 </div>
 
 </nav>
-<h1>halo </h1> 
+<h1></h1> 
     @yield('content')
 </div>
 

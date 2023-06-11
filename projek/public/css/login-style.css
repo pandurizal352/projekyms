@@ -32,14 +32,7 @@ body{
     left: 0;
     background-color: #113FE2;
 }
-/* Footer */
-footer {
-    border-top: 2px solid var(--description-color);
-    position: relative;
-    margin: auto;
-    margin-top: 10em;
-    width: 88%;
-}
+
 .mobile-title {
     height: 100%;
     background-image: url(../images/holdings.png);
@@ -59,19 +52,6 @@ footer {
 }
 .blue-font {
     color: #0A1B59;
-}
-.list {
-    text-decoration: none;
-    list-style-type: none;
-    letter-spacing: .8px;
-    font-weight: 600;
-    right: 1.3em;
-    top: 5em;
-    z-index: 100;
-}
-.list li {
-    cursor: pointer;
-    margin-top: 10px;
 }
 .welcome {
     margin-top: 5em;
@@ -293,6 +273,8 @@ footer {
         width: 86%;
         bottom: -7rem;
     }
+
+
     .list {
         position: absolute!important;
         background-color:white;
@@ -305,4 +287,5 @@ footer {
         top: 4.5em;
         border-radius: .3em;
     }
+
 }
