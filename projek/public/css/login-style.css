@@ -21,6 +21,8 @@ body{
 .list-child{
     position: relative;
     color: #0A1B59;
+    text-decoration: none;
+    list-style: none;
 }
 .list-child.active::after{
     content: '';
