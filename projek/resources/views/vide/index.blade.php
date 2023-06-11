@@ -29,11 +29,8 @@
         <tr>
             <td class="text-center">{{ ++$i }}</td>
             <td>{{ $videos->judul }}</td>
-            <td>{{ $videos->video }}</td>
+            <td>{!! $videos->video !!}</td>
             <td>{{ $videos->artikel }}</td>
-         
-               
-            </td>
         </tr>
         @endforeach
     </table>

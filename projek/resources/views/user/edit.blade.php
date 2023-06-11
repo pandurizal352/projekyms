@@ -40,7 +40,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <label for="image" class="form-label">image</label>
 
-            <input type="hidden" name="oldImage" value="{{$user->image}}">
+            <input type="" name="oldImage" value="{{$user->image}}">
 
             @if($user->image)
             <img src="{{ asset('storage/' . $user->image) }}" class="img-preview img-fluid mb-3 d-block">
