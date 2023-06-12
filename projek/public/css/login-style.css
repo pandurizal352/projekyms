@@ -23,6 +23,7 @@ body{
     color: #0A1B59;
     text-decoration: none;
     list-style: none;
+    font-weight: 600;
 }
 .list-child.active::after{
     content: '';
@@ -203,6 +204,8 @@ body{
 }
 .profile-picture{
     width: 150px;
+    height: 150px;
+    object-fit: contain ;
     border-radius: 50%;
     align-self: center;  
     position: relative;
@@ -288,6 +291,13 @@ body{
         right: 1.4em;
         top: 4.5em;
         border-radius: .3em;
+        z-index: 300;
+    }
+    .list-child.active::after{
+        display: none;
+    }
+    .list-child {
+        margin-top: 10px;
     }
 
 }

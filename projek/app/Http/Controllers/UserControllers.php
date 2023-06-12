@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 
 
 class UserControllers extends Controller
@@ -14,18 +15,20 @@ class UserControllers extends Controller
    
     public function toProfile()
     {
-        $user1 = auth()->user()->image;
+        $userImage = auth()->user()->image;
         return view('main-interface.profile',[
             "title" => "Profile",
-            "user" => $user1,
+            "userImage" => $userImage,
         ]);
     }
     public function index()
     {   
         $user = User::latest()->paginate(5);
-        return view ('user.index',compact('user'))->with('i', (request()->input('page', 1) -1) * 5);
+        return view ('user.index',[
+            "title" => "User CRUD",
+            "user" => $user,
+        ],compact('user'))->with('i', (request()->input('page', 1) -1) * 5);
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -34,7 +37,9 @@ class UserControllers extends Controller
     public function create()
     {
         //
-        return view('user.create');
+        return view('user.create', [
+            "title"=> "User Create"
+        ]);
     }
 
     /**
@@ -75,7 +80,9 @@ class UserControllers extends Controller
      */
     public function show(User $user)
     {
-        return view('user.show',compact('user'));
+        return view('user.show',[
+            "title"=>"User Show",
+        ],compact('user'));
     }
 
     /**
@@ -86,7 +93,9 @@ class UserControllers extends Controller
      */
     public function edit(User $user)
     {
-        return view('user.edit', compact('user'));
+        return view('user.edit',[
+            "title"=> "User Edit"
+        ], compact('user'));
     }
 
     /**
@@ -160,7 +169,13 @@ class UserControllers extends Controller
             'password' => Hash::make($request->New_password)
         ]);
 
-        return view('main-interface.login-landing')->with('sukses','password berhasil di ubah silahkan login kembali');
+        Auth::logout();
+ 
+        $request->session()->invalidate();
+     
+        $request->session()->regenerateToken();
+     
+        return redirect('/');
 
 
 

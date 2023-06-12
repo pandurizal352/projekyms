@@ -1,4 +1,8 @@
 $(document).ready(function(){
+    $('.list').hide();
+    $('.fa-ellipsis').on('click',function(){
+        $('.list').fadeToggle();
+    })
     $('.login-container').hide()
     $(".btn-login").on('click', function (){
         $('.login-container').fadeToggle()
@@ -53,8 +57,6 @@ $(document).ready(function(){
       } else {
         $(".time").html("Selamat Malam");
       }
-      const valueSelect = document.getElementsByTagName('select')[0].value;
-      console.log(valueSelect)
 })
 
 function previewImage(){

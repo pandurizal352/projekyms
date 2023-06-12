@@ -24,10 +24,9 @@ use GuzzleHttp\Middleware;
 
 Route::resource('sisw',SiswaControllers::class)->middleware('admin');
 Route::resource('user',UserControllers::class)->middleware('auth');
-//Route::resource('user',UserControllers::class);
+// Route::resource('user',UserControllers::class);
 
 Route::get('/',[LoginController::class,'index'])->name('login')->middleware('guest');
-
 
 Route::post('/',[LoginController::class,'authenticate']);
 Route::post('/logout',[LoginController::class,'logout']);
@@ -35,7 +34,7 @@ Route::post('/logout',[LoginController::class,'logout']);
 Route::get('/change-password',[UserControllers::class,'ChangePassword'])->middleware('auth');;
 Route::post('/change-password',[UserControllers::class,'ProsesChangePassword'])->middleware('auth');
 
-Route::get('/profile',[UserControllers::class,'toProfile'])->middleware('auth');
+Route::get('/profile',[UserControllers::class,'toProfile','index'])->middleware('auth');
 Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth');
 //Route::resource('/dasboard/user',UserControllers::class)->except('show'); itu kecuali show ya
 
