@@ -38,9 +38,5 @@ Route::get('/profile',[UserControllers::class,'toProfile','index'])->middleware(
 Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth');
 //Route::resource('/dasboard/user',UserControllers::class)->except('show'); itu kecuali show ya
 
-Route::get('/Courses',function(){
-    return view('main-interface.profile');
-});
-
 Route::resource('/video',VideoControllers::class);
 //Route::get('/video',VideoController::class);

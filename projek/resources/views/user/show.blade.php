@@ -1,52 +1,32 @@
 @extends('layouts.main-layouts')
 
 @section('content')
-    <div class="row mt-5 mb-5">
-        <div class="col-lg-12 margin-tb">
-            <div class="float-left">
-                <h2> Show User</h2>
-            </div>
-            <div class="float-right">
-                <a class="btn btn-secondary" href="{{ route('user.index') }}"> Back</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                @if($user->image)
-                <img src="{{asset('storage/' . $user->image)}}" class="img-fluid mt-3" style="height: 120px;">
-                @else
-                <img src="/images/60111.jpg" class="img-fluid mt-3" style="height: 120px;">
-                @endif
-                
+    <main style="width:90%; margin:auto">
+        <div class="row mt-5 mb-5">
+            <div class="col-lg-12 margin-tb">
+                <div class="float-left">
+                    <h2>User Data</h2>
+                </div>
+                <div class="float-right">
+                    <a class="btn btn-secondary" href="{{ route('user.index') }}"> Back</a>
+                </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Nim:</strong>
-                {{ $user->Nim }}
+    
+        <div class="row">
+            <div class="col-md-6">
+                    @if($user->image)
+                    <img src="{{asset('storage/' . $user->image)}}" class="img-fluid mt-3" style="witdh:200px;">
+                    @else
+                    <img src="/images/60111.jpg" class="img-fluid mt-3" style="height: 120px;">
+                    @endif
             </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>nama :</strong>
-                {{ $user->nama }}
+            <div class="col-md-6 d-flex flex-column row-gap-2">
+                <p><strong>Nim : </strong>{{ $user->Nim }}</p>   
+                <p><strong>Nama : </strong>{{ $user->nama }}</p>   
+                <p><strong>Email : </strong>{{ $user->email }}</p>  
+                <p><strong>Password : </strong>{{ $user->password }}</p>  
+                <p><strong>Role : </strong>{{ $user->role }}</p>
             </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>email :</strong>
-                {{ $user->email }}
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>role :</strong>
-                {{ $user->role }}
-            </div>
-        </div>
-        
-    </div>
+    </main>
 @endsection

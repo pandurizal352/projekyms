@@ -147,7 +147,9 @@ class UserControllers extends Controller
 
     public function ChangePassword()
     {
-        return view('change-password');
+        return view('change-password',[
+            "title"=> "Ubah Password",
+        ]);
     }
 
     public function ProsesChangePassword(Request $request)

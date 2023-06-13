@@ -2,17 +2,15 @@
 
 @section('content')    
 <div class="bg-profile" id="profile"> 
-    <h2 class="profile-text text-light">TEST Profile.</h2>
+    <h2 class="profile-text text-light">Profile.</h2>
     <div class="user-profile">
         <div class="pp-container position-relative d-flex flex-column">
-
             <!-- <img src="/images/60111.jpg" alt="Profile Picture" class=""> -->
             @if($userImage !== null)
                 <img src="{{asset('storage/' . $userImage)}}" class="profile-picture" alt="Profile Picture">
                 @else
                 <img src="/images/60111.jpg" class="profile-picture" alt="Profile Picture">
-                @endif
-            
+            @endif
             <input type="file" id="file" value="{{ $userImage }}">
             <label for="file" class="upload-picture-btn d-none"><i class="fa-solid fa-camera fa-beat"></i></label>
         </div>
