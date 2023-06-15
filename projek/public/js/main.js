@@ -37,13 +37,6 @@ $(document).ready(function(){
         animate('.btn-login-2')
     })
 
-    // Upload Profile Picture 
-    $(".pp-container").on('mouseenter',()=>{
-        $(".upload-picture-btn").removeClass("d-none")
-    })
-    $(".pp-container").on('mouseleave',()=>{
-        $(".upload-picture-btn").addClass("d-none")
-    })
 
     // Conditional Time-Zone
     const currentTime = new Date();
@@ -71,8 +64,10 @@ function previewImage(){
     oFReader.onload = function(oFREvent){
         imgPreview.src = oFREvent.target.result;
     }
+    $('#simpan').on('click',function (e){
+        e.preventDefault();
+    })
 }
-
 // Button Animate
 const animate = (btnClass)=>{
     $(btnClass).addClass('btn-animate');

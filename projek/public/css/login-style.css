@@ -55,7 +55,7 @@ body{
     padding: 0;
 }
 .blue-font {
-    color: #0A1B59;
+    color: #0A1B59!important;
 }
 .welcome {
     margin-top: 5em;
@@ -179,7 +179,7 @@ body{
     width: 80%;
     height: 400px;
     margin: auto;
-    margin-bottom: 15em;
+    margin-bottom: 18em;
     display: flex;
     justify-content: center;
     border-radius: 1em 1em 1em 1em;
@@ -194,10 +194,11 @@ body{
     position: relative;
     bottom: -10em;
     width: 75%;
+    height: 29em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2.3em 0 2.3em 0;
+    padding: 2.3em 0 2.5em 0;
     background-color: white;
     border-radius: 10px;
     box-shadow: -1px 20px 27px -3px rgba(0,0,0,0.46);
@@ -213,7 +214,7 @@ body{
     position: relative;
 }
 .typing {
-    width: 17ch;
+    width: 100%;
     align-self: center;
     animation: typing 3s steps(22) alternate;
     white-space: nowrap;
@@ -223,6 +224,11 @@ body{
   }
 .greetings-1{
     margin-top: 20px;
+    color: #113FE2;
+    font-size: 26px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 20px;
+    background-color: rgba(17,63,226,0.1); 
 }
 .greetings{
     text-align: center;
@@ -234,30 +240,28 @@ body{
     top: 2em;
     
 }
-#file {
+#image {
     display: none;
 }
 .upload-picture-btn{
     cursor: pointer;
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    bottom: 3em;
+    right: 1em;
+    background-color: rgba(0, 0, 0, 0.205);
+    padding: 5px 10px 5px 10px;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.1);
-    width: 100%;
-    height: 100%;
 }
 #Footer {
     width: 95%;
     box-sizing: border-box;
     padding: 30px;
     margin: auto;
-    border-top: 2px solid rgb(124, 122, 122);;
+    border-top: 2px solid var(--description-color);
 }
 #Footer p {
     font-size: 18px;
-    color: rgb(97, 95, 95);
+    color: var(--description-color);
 }
   @keyframes typing {
     from {

@@ -8,7 +8,7 @@
                     <h2>CRUD User</h2>
                 </div>
                 <div class="float-right">
-                    <a class="btn btn-success" href="{{ route('user.create') }}"> Input User</a>
+                    <a class="btn btn-primary" href="{{ route('user.create') }}"> Input User</a>
                 </div>
             </div>
         </div>
@@ -21,11 +21,11 @@
     
         <table class="table table-bordered w-100 overflow-hidden">
             <tr>
-                <th class="text-center">No</th>
-                <th class="text-center">image</th>
+                <th class="text-center">Id</th>
+                <th class="text-center">Profile Picture</th>
                 <th>Nim</th>
-                <th class="text-center">Nama User</th>
-                <th class="text-center">email</th>
+                <th class="text-center">Username</th>
+                <th class="text-center">Email</th>
                 {{-- <th width="150px"class="text-center">password</th> --}}
                 <th class="text-center">Action</th>
             </tr>
@@ -37,12 +37,10 @@
                     <div style="max-height:150px; overflow:hidden;">
                         <img src="{{asset('storage/' . $User->image)}}" class="img-fluid mt-3" style="width:150px">
                     </div>
-                    
                     @else
                     <div style="max-height:150px; overflow:hidden;">
-                    <img src="/images/60111.jpg" class="img-fluid mt-3">
+                    <img src="/images/60111.jpg" class="img-fluid mt-3" style="width:150px">
                     </div>
-                    
                     @endif
                 </td>
                 <td>{{ $User->Nim }}</td>
@@ -50,19 +48,21 @@
                 <td>{{ $User->email}}</td>
                 {{-- <td>{{ $User->password}}</td> --}}
                 <td class="text-center">
-                    <form action="{{ route('user.destroy',$User->id) }}" method="POST" class="d-flex column-gap-3">
-                        <a class="btn btn-info btn-sm" href="{{ route('user.show',$User->id) }}">Show</a>
-                        <a class="btn btn-primary btn-sm" href="{{ route('user.edit',$User->id) }}">Edit</a>
+                    <form action="{{ route('user.destroy',$User->id) }}" method="POST" class="d-flex column-gap-3 justify-content-center">
+                        <a class="btn btn-primary btn-sm" href="{{ route('user.show',$User->id) }}" style="width: 70px">Show</a>
+                        <a class="btn btn-primary btn-sm" href="{{ route('user.edit',$User->id) }}" style="width: 70px">Edit</a>
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" style="width: 70px">Delete</button>
                     </form>
                 </td>
             </tr>
             @endforeach
         </table>
+        <div style="width: 150px" class="d-flex">
+            {!! $user->links('pagination::bootstrap-4')  !!}
+        </div>
     </main>
 
-    {!! $user->links() !!}
 
 @endsection

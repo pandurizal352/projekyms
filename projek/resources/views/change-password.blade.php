@@ -4,7 +4,6 @@
 <div style="width: 95%; margin:auto;">
     <form action="change-password" method="post" class="w-50">
         @csrf
-
         @if(session('error'))
             <div class="alert alert-danger">{{session('error')}}</div>
         @endif

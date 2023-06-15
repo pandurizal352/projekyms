@@ -105,6 +105,7 @@ class UserControllers extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+ 
     public function update(Request $request, User $user)
     {
         $validatedData =  $request->validate([
@@ -142,7 +143,7 @@ class UserControllers extends Controller
         }
         $user->delete();
 
-        return redirect()->route('user.index')->with('succes','User Berhasil di Hapus');
+        return redirect()->route('user.index')->with('succes','User berhasil di hapus');
     }
 
     public function ChangePassword()
@@ -157,14 +158,14 @@ class UserControllers extends Controller
         //cek passwordd nya
         $cek = Hash::check($request->old_password, auth()->user()->password);
         if(!$cek){
-            return back()->with('error','password lama gak sama ama akun nya');
+            return back()->with('error','Password lama tidak sesuai');
         }
 
         //cek password baru dengan confirm
         $cek2 = $request->New_password == $request->Reapet_password;
         
         if(!$cek2){
-            return back()->with('error','password baru sama konfersi password nya gak sama');
+            return back()->with('error','Konfirmasi password salah');
         }
 
         auth()->user()->update([
@@ -174,7 +175,6 @@ class UserControllers extends Controller
         Auth::logout();
  
         $request->session()->invalidate();
-     
         $request->session()->regenerateToken();
      
         return redirect('/');

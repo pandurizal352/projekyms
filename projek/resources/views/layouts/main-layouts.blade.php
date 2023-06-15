@@ -23,19 +23,25 @@
             @yield('content')
         </main>
         <footer id="Footer">
-            <div class="row d-flex column-gap-4">
-                <div class="col-md-4">
+            <div class="row d-flex column-gap-4 justify-content-center">
+                <div class="col-md">
                     <img src="/images/logo.png" alt="Company Logo" style="width:5em;">
-                    <p><strong>Gallery Investasi UHAMKA.</strong></p>
+                    <p class="blue-font"><strong>Gallery Investasi UHAMKA.</strong></p>
                     <p> Jl. Raya Bogor KM.23 No.99, RT.4/RW.5, Rambutan, Kec. Ciracas, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13830</p>
                     <p>Jakarta, Indonesia</p>
                     <p></p>
                 </div>
                 <div class="col-md" style="margin-top:5em">
-                    <p><strong>Contact</strong></p>
+                    <p class="blue-font"><strong>Contact</strong></p>
                     <p><i class="fa-solid fa-phone"></i>  (021) 8400341</p>
                     <p><i class="fa-solid fa-envelope"></i> feb@uhamka.ac.id</p>
                 </div>
+                <div class="col-md">
+                    <p class="blue-font" style="margin-top:4.3em"><strong>Follow Us</strong></p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+                <p style="font-weight:600;">&copy 2023 Gallery Investasi UHAMKA</p>
             </div>
         </footer>
     </div>

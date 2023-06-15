@@ -40,7 +40,7 @@
                     {{-- <input type="" name="oldImage" value="{{$user->image}}"> --}}
         
                     @if($user->image)
-                    <img src="{{ asset('storage/' . $user->image) }}" class="img-preview img-fluid mb-3 d-block">
+                    <img src="{{ asset('storage/' . $user->image) }}" class="img-preview img-fluid mb-3 d-block" style="width:200px; height:200px; object-fit:contain;">
                     @else
                     <img class="img-preview img-fluid mb-3" style="width:150px; height:150px;">
                     @endif
@@ -83,20 +83,4 @@
             </div>    
         </form>
     </main>
-        <!--  java script gambar nya ya  -->
-    <script>
-        function previewImage(){
-            const image = document.querySelector('#image');
-            const imgPreview = document.querySelector('.img-preview');
-
-            imgPreview.style.display = 'block';
-
-            const oFReader = new FileReader();
-            oFReader.readAsDataURL(image.files[0]);
-
-            oFReader.onload = function(oFREvent){
-                imgPreview.src = oFREvent.target.result;
-            }
-        }
-    </script>
 @endsection
