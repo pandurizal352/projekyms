@@ -106,6 +106,25 @@ class UserControllers extends Controller
      * @return \Illuminate\Http\Response
      */
  
+    public function updateImage(Request $request, User $user)
+    {   
+        $validatedData =  $request->validate([
+            
+            'image' => 'image|file|max:1024',
+        ]);
+        
+        if($request->file('image')){
+            if($request->oldImage){
+                Storage::delete($request->oldImage);    
+            }
+            $validatedData['image'] = $request->file('image')->store('post-images');
+        }
+
+          $user->update($validatedData);
+        //$user->update($request->all());
+
+        return redirect()->route('main-interface.profile')->with('succes','User Berhasil di Update');
+    }
     public function update(Request $request, User $user)
     {
         $validatedData =  $request->validate([

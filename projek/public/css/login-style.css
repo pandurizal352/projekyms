@@ -6,11 +6,27 @@
     --blue-linear-gradient :linear-gradient(124deg, rgba(17,63,226,1) 39%, rgba(0,168,255,1) 97%);
 }
 body{
+    overflow: scroll;
     font-family: 'Didact Gothic', sans-serif;
     font-family: 'Lato', sans-serif;
     font-family: 'Poppins', sans-serif;
-    background-color: #f6f8fd;;
+    background-color: #f6f8fd;
+    
 }
+body::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+  }
+  
+body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 1ex;
+  }
+  
+body::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to right, #f9c817, #facd1c, #fbd120, #fcd625, #fddb29);
+    border-radius: 1ex;
+  }
 .link-style:hover {
     color:#113FE2;
     text-decoration: none;
@@ -24,7 +40,7 @@ body{
     text-decoration: none;
     list-style: none;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
 }
 .list-child.active::after{
     content: '';
@@ -260,7 +276,7 @@ body{
     border-top: 2px solid var(--description-color);
 }
 #Footer p {
-    font-size: 18px;
+    font-size: 17px;
     color: var(--description-color);
 }
   @keyframes typing {
