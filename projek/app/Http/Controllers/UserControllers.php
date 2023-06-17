@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 
 class UserControllers extends Controller
 {   
+
     public function search(Request $request)
     {
         $cari = $request->search;
@@ -39,6 +40,8 @@ class UserControllers extends Controller
         return redirect()->route('user.profile')->with('success', 'Gambar profil berhasil diperbarui');
     }
     
+
+
     public function toProfile()
     {
         $userImage = auth()->user()->image;

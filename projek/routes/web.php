@@ -24,9 +24,11 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 
 Route::resource('sisw',SiswaControllers::class)->middleware('admin');
-Route::resource('user',UserControllers::class)->middleware('auth');
+
+Route::resource('user',UserControllers::class)->middleware('admin');
 //Route::resource('user',UserControllers::class);
 Route::get('/search', [UserControllers::class, 'search'])->name('search');
+
 
 Route::get('/',[LoginController::class,'index'])->name('login')->middleware('guest');
 Route::post('/',[LoginController::class,'authenticate']);
@@ -34,6 +36,7 @@ Route::post('/logout',[LoginController::class,'logout']);
 
 Route::get('/change-password',[UserControllers::class,'ChangePassword'])->middleware('auth');;
 Route::post('/change-password',[UserControllers::class,'ProsesChangePassword'])->middleware('auth');
+
 
 // Route::get('/profile',[UserControllers::class,'toProfile','index','updateImage'])->name('main-interface.profile')->middleware('auth');
 // Route::get('/profile',[Profilep::class,'index','update'])->name('main-interface.profile')->middleware('auth');
@@ -45,5 +48,6 @@ Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth'
 Route::get('/dashboard/course-spm', [SpmController::class, 'index'])->middleware('checkpin')->name('dashboard.spm');
 
 Route::post('/dashboard/check-pin', [DashboardController::class, 'checkPin'])->name('dashboard.check_pin');
+
 //Route::resource('/dasboard/user',UserControllers::class)->except('show'); itu kecuali show ya
 
