@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 
 class UserControllers extends Controller
 {   
-    
+        
    
     public function toProfile()
     {
