@@ -113,9 +113,6 @@ function previewImage(){
     oFReader.onload = function(oFREvent){
         imgPreview.src = oFREvent.target.result;
     }
-    $('#simpan').on('click',function (e){
-        e.preventDefault();
-    })
 }
 // Button Animate
 const animate = (btnClass)=>{

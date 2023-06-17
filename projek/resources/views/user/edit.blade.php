@@ -36,15 +36,15 @@
                 </div>
         
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                    <label for="image" class="form-label"><strong>Image</strong></label>
-                    {{-- <input type="" name="oldImage" value="{{$user->image}}"> --}}
-        
+                    <p><strong>Image</strong></p>
+                    <label for="image" class="form-label">Upload Image</label>
+                    <input class="form-control" type="file" id="image" name="image" onchange="previewImage()">
+                    {{-- <input type="file" name="oldImage" value="{{$user->image}}"> --}}
                     @if($user->image)
                     <img src="{{ asset('storage/' . $user->image) }}" class="img-preview img-fluid mb-3 d-block" style="width:200px; height:200px; object-fit:contain;">
                     @else
-                    <img class="img-preview img-fluid mb-3" style="width:150px; height:150px;">
+                    <img class="img-preview img-fluid mb-3" style="width:150px; height:150px;" src="/images/60111.jpg">
                     @endif
-                    <input class="form-control " type="file" id="image" name="image" onchange="previewImage()">
                 </div>
         
                 @error('image')

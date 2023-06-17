@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-md-6">
                     @if($user->image)
-                    <img src="{{asset('storage/' . $user->image)}}" class="img-fluid mt-3" style="witdh:200px;">
+                    <img src="{{asset('storage/' . $user->image)}}" class="img-fluid mt-1" style="width:400px; height:400px; object-fit:contain;">
                     @else
                     <img src="/images/60111.jpg" class="img-fluid mt-3" style="height: 120px;">
                     @endif
