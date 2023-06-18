@@ -12,7 +12,16 @@ use Illuminate\Support\Facades\Auth;
 class UserControllers extends Controller
 {   
     
-   
+    public function search(Request $request)
+    {
+        $cari = $request->search;
+        $user = User::where('nim', 'like', "%" . $cari . "%")->paginate(5);
+        return view('user.index', [
+            "title" => "User cari",
+            "user" => $user,
+        ],compact('user'))->with('i', (request()->input('page', 1) - 1) * 5);
+    }
+
     public function toProfile()
     {
         $userImage = auth()->user()->image;

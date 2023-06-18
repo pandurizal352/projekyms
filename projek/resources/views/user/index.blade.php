@@ -7,6 +7,7 @@
                 <div class="float-left">
                     <h2>CRUD User</h2>
                 </div>
+                
                 <div class="float-right">
                     <a class="btn btn-primary" href="{{ route('user.create') }}"> Input User</a>
                 </div>
@@ -18,7 +19,14 @@
             <p>{{ $message }}</p>
         </div>
         @endif
-    
+
+        <form class="form" method="get" action="{{ route('search') }}">
+        <div class="form-group w-100 mb-3">
+        <input type="text" name="search" class="form-control w-75 d-inline" id="search" placeholder="Masukkan keyword">
+        <button type="submit" class="btn btn-primary mb-1">Cari</button>
+    </div>
+</form>
+
         <table class="table table-bordered w-100 overflow-hidden">
             <tr>
                 <th class="text-center">Id</th>

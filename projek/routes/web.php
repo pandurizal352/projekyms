@@ -24,7 +24,8 @@ use GuzzleHttp\Middleware;
 
 Route::resource('sisw',SiswaControllers::class)->middleware('admin');
 Route::resource('user',UserControllers::class)->middleware('auth');
-// Route::resource('user',UserControllers::class);
+//Route::resource('user',UserControllers::class);
+Route::get('/search', [UserControllers::class, 'search'])->name('search');
 
 Route::get('/',[LoginController::class,'index'])->name('login')->middleware('guest');
 Route::post('/',[LoginController::class,'authenticate']);

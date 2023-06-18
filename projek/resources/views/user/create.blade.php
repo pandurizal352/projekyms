@@ -1,6 +1,9 @@
 @extends('layouts.main-layouts')
 
 @section('content')
+
+
+
 <main style="width:90%; margin:auto;">
     <div class="mt-5 mb-5">
         <div class="row margin-tb">
@@ -10,6 +13,7 @@
             <div class="col-md-6 d-flex justify-content-md-end align-items-center">
                 <a class="btn btn-secondary" href="{{ route('user.index') }}"> Kembali</a>
             </div>
+            
         </div>
     </div>
     
