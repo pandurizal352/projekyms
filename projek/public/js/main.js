@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    const containerSimpan = $('.container-simpan');
+    containerSimpan.hide()
     $('.list').hide();
     $('.fa-ellipsis').on('click',function(){
         $('.list').fadeToggle();
@@ -102,17 +104,22 @@ $('.course-list').on('click',function(){
 })
 
 function previewImage(){
-    const image = document.querySelector('#image');
-    const imgPreview = document.querySelector('.img-preview');
-
-    imgPreview.style.display = 'block';
-
-    const oFReader = new FileReader();
-    oFReader.readAsDataURL(image.files[0]);
-
-    oFReader.onload = function(oFREvent){
-        imgPreview.src = oFREvent.target.result;
-    }
+    $(document).ready(function(){
+        const image = document.querySelector('#image');
+        const imgPreview = document.querySelector('.img-preview');
+    
+        imgPreview.style.display = 'block';
+    
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(image.files[0]);
+    
+        oFReader.onload = function(oFREvent){
+            imgPreview.src = oFREvent.target.result;
+        }
+        $('.container-simpan').slideDown();
+        // const simpanBtn = document.querySelector('.container-simpan');
+        // simpanBtn.classList.remove('d-none')
+    })
 }
 // Button Animate
 const animate = (btnClass)=>{

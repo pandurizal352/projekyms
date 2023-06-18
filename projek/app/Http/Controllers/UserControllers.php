@@ -78,7 +78,7 @@ class UserControllers extends Controller
     {
        
         // return $request->file('image')->store('post-images');
-
+        
        $validatedData = $request->validate([
             'Nim' => 'required',
             'nama' => 'required',

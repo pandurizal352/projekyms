@@ -27,6 +27,9 @@
                     <div class="course-video">
                         {!! $video->video !!}
                     </div>
+                    <article>
+                        {{$video->article}}
+                    </article>
                 </div>
             @endforeach
         </div>

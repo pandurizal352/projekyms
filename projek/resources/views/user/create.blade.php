@@ -76,7 +76,10 @@
             <div class="form-group">
                 
                 <label><i class="fa fa-key"></i> Role</label>
-                <input type="text" name="role" class="form-control "   placeholder="role" required="">
+                <select id="cars" name="role" class="form-control " placeholder="role" required="">
+                    <option value="1">Admin</option>
+                    <option value="0">User</option>
+                </select>
             </div>
             </div>
     

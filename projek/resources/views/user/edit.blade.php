@@ -74,7 +74,10 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Role</strong>
-                        <input type="text" class="form-control"  name="role"  value="" placeholder="user = 0 admmin= 1"></textarea>
+                        <select id="cars" name="role" class="form-control " placeholder="role" required="">
+                            <option value="1">Admin</option>
+                            <option value="0">User</option>
+                        </select>                    
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
