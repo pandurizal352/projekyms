@@ -39,9 +39,10 @@
             </div>
             
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <label for="image" class="form-label"><strong>Image</strong></label>
-                <img class="img-preview img-fluid mb-3  ">
-                <input class="form-control " type="file" id="image" name="image" onchange="previewImage()">
+                <p><strong>Image</strong></p>
+                <label for="image" class="form-label">Upload Image</label>
+                <img class="img-preview img-fluid mb-3 " style="width:200px; height:200px; object-fit:contain; border:none;">
+                <input class="form-control" type="file" id="image" name="image" onchange="previewImage()">
             </div>
     
             @error('image')

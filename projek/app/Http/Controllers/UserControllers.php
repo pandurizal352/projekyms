@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Auth;
 
 class UserControllers extends Controller
 {   
-    
     public function search(Request $request)
     {
         $cari = $request->search;
@@ -22,6 +21,24 @@ class UserControllers extends Controller
         ],compact('user'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
+    public function updateImage(Request $request, User $user)
+    {
+        $validatedData = $request->validate([
+            'image' => 'image|file|max:1024',
+        ]);
+    
+        if ($request->file('image')) {
+            if ($user->image) {
+                Storage::delete($user->image);
+            }
+            $validatedData['image'] = $request->file('image')->store('post-images');
+        }
+    
+        $user->update($validatedData);
+    
+        return redirect()->route('user.profile')->with('success', 'Gambar profil berhasil diperbarui');
+    }
+    
     public function toProfile()
     {
         $userImage = auth()->user()->image;
@@ -115,25 +132,6 @@ class UserControllers extends Controller
      * @return \Illuminate\Http\Response
      */
  
-    public function updateImage(Request $request, User $user)
-    {   
-        $validatedData =  $request->validate([
-            
-            'image' => 'image|file|max:1024',
-        ]);
-        
-        if($request->file('image')){
-            if($request->oldImage){
-                Storage::delete($request->oldImage);    
-            }
-            $validatedData['image'] = $request->file('image')->store('post-images');
-        }
-
-          $user->update($validatedData);
-        //$user->update($request->all());
-
-        return redirect()->route('main-interface.profile')->with('succes','User Berhasil di Update');
-    }
     public function update(Request $request, User $user)
     {
         $validatedData =  $request->validate([

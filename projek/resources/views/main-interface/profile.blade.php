@@ -6,15 +6,14 @@
     <div class="user-profile">
         <div class="pp-container position-relative d-flex flex-column">
             <!-- <img src="/images/60111.jpg" alt="Profile Picture" class=""> -->
-            @if($userImage !== null)
-                <img src="{{asset('storage/' . $userImage)}}" class="img-preview profile-picture" alt="Profile Picture">
+            <form action="{{ route('user.updateImage',['user' => auth()->user()->id]) }}" method="POST" enctype="multipart/form-data" class="pp-container d-flex justify-content-center">                @if($userImage !== null)
+                <img src="{{ asset('storage/' . $userImage) }}" class="img-preview profile-picture" alt="Profile Picture">
                 @else
                 <img src="/images/60111.jpg" class="img-preview profile-picture" alt="Profile Picture">
-            @endif
-            <label for="image" class="upload-picture-btn"><i class="fa-solid fa-camera"></i></label>
-            <form action="{{route('Profilep.update',auth()->user()->id) }}" method="POST" enctype="multipart/form-data" class="pp-container d-flex justify-content-center">
+                @endif
                 @csrf
-                <input type="file" id="image" value="{{ $userImage }}" onchange="previewImage()" class="form-control" name="image">
+                <label for="image" class="upload-picture-btn"><i class="fa-solid fa-camera"></i></label>
+                <input type="file" id="image" onchange="previewImage()" class="form-control" name="image">
                 <button type="submit" class="btn btn-primary mt-3" id="simpan">Simpan</button>
             </form>
         </div>
@@ -31,8 +30,4 @@
         </div>
     </div>
 </div>
-
-
-
-
 @endsection

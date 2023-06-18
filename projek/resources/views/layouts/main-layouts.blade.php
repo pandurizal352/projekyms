@@ -41,7 +41,7 @@
                 </div>
                 <div class="col-md">
                     <p class="blue-font" style="margin-top:5em"><strong>Keep update</strong></p>
-                    <i class="fa-brands fa-instagram fa-2xl"></i>
+                     <a href="https://www.instagram.com/galvest_uhamka/" style="text-decoration: none"><i class="fa-brands fa-instagram fa-2xl"></i></a>
                 </div>
             <div class="d-flex justify-content-center mt-4">
                 <p style="font-weight:600;">&copy 2023 Gallery Investasi UHAMKA</p>
