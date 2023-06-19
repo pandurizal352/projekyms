@@ -14,11 +14,11 @@ class UserControllers extends Controller
     public function search(Request $request)
     {
         $cari = $request->search;
-        $user = User::where('nim', 'like', "%" . $cari . "%")->paginate(5);
+        $user = User::where('nim', 'like', "%" . $cari . "%")->paginate(10);
         return view('user.index', [
             "title" => "User cari",
             "user" => $user,
-        ],compact('user'))->with('i', (request()->input('page', 1) - 1) * 5);
+        ],compact('user'))->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     public function updateImage(Request $request, User $user)
@@ -49,11 +49,11 @@ class UserControllers extends Controller
     }
     public function index()
     {   
-        $user = User::latest()->paginate(5);
+        $user = User::latest()->paginate(10);
         return view ('user.index',[
             "title" => "User CRUD",
             "user" => $user,
-        ],compact('user'))->with('i', (request()->input('page', 1) -1) * 5);
+        ],compact('user'))->with('i', (request()->input('page', 1) -1) * 10);
     }
     /**
      * Show the form for creating a new resource.

@@ -5,10 +5,9 @@ use App\Http\Controllers\SiswaControllers;
 use App\Http\Controllers\UserControllers; 
 use App\Http\Controllers\LoginController; 
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\Profilep;
-use App\Http\Controllers\VideoControllers;
+use App\Http\Controllers\SpmController;
 use GuzzleHttp\Middleware;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +39,9 @@ Route::post('/change-password',[UserControllers::class,'ProsesChangePassword'])-
 Route::get('/profile', [UserControllers::class, 'toProfile'])->middleware('auth')->name('user.profile');
 Route::post('/profile/update-image/{user}', [UserControllers::class, 'updateImage'])->middleware('auth')->name('user.updateImage');
 
-Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth');
+
+Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth')->name('dashboard');
+Route::get('/dashboard/course-spm',[SpmController::class, 'index'])->name('dashboard.spm');
+Route::post('/dashboard/check-pin', [DashboardController::class, 'checkPin'])->name('dashboard.check_pin');
 //Route::resource('/dasboard/user',UserControllers::class)->except('show'); itu kecuali show ya
 
