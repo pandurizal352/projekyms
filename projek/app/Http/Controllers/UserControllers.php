@@ -11,8 +11,35 @@ use Illuminate\Support\Facades\Auth;
 
 class UserControllers extends Controller
 {   
-        
-   
+
+    public function search(Request $request)
+    {
+        $cari = $request->search;
+        $user = User::where('nim', 'like', "%" . $cari . "%")->paginate(5);
+        return view('user.index',[
+            "title" => "search",
+            "user" => $user, 
+        ],compact('user'))->with('i', (request()->input('page', 1) - 1) * 5);
+    }
+
+    public function updateImage(Request $request, User $user)
+    {
+        $validatedData = $request->validate([
+            'image' => 'image|file|max:1024',
+        ]);
+    
+        if ($request->file('image')) {
+            if ($user->image) {
+                Storage::delete($user->image);
+            }
+            $validatedData['image'] = $request->file('image')->store('post-images');
+        }
+    
+        $user->update($validatedData);
+    
+        return redirect()->route('user.profile')->with('success', 'Gambar profil berhasil diperbarui');
+    }
+    
     public function toProfile()
     {
         $userImage = auth()->user()->image;

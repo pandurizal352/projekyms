@@ -23,7 +23,7 @@
             @yield('content')
         </main>
         <footer id="Footer">
-            <div class="row d-flex column-gap-4 justify-content-center">
+            <div class="row d-flex column-gap-4 row-gap-0 justify-content-center">
                 <div class="col-md">
                     <img src="/images/logo.png" alt="Company Logo" style="width:5em;">
                     <p class="blue-font"><strong>Gallery Investasi UHAMKA.</strong></p>
@@ -34,12 +34,12 @@
                 <div class="col-md" style="margin-top:5em">
                     <p class="blue-font"><strong>Contact</strong></p>
                     <p><i class="fa-solid fa-phone"></i>  (021) 8400341</p>
-                    <p><i class="fa-solid fa-envelope"></i> feb@uhamka.ac.id</p>
+                    <p><i class="fa-solid fa-envelope"></i>  galeriinvestasifeb@uhamka.ac.id</p>
                 </div>
                 <div class="col-md">
-                    <p class="blue-font" style="margin-top:4.3em"><strong>Follow Us</strong></p>
+                    <p class="blue-font" style="margin-top:5em"><strong>Keep update</strong></p>
+                     <a href="https://www.instagram.com/galvest_uhamka/" style="text-decoration: none"><i class="fa-brands fa-instagram fa-2xl"></i></a>
                 </div>
-            </div>
             <div class="d-flex justify-content-center mt-4">
                 <p style="font-weight:600;">&copy 2023 Gallery Investasi UHAMKA</p>
             </div>

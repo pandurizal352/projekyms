@@ -6,6 +6,7 @@ use App\Http\Controllers\UserControllers;
 use App\Http\Controllers\LoginController; 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Profilep;
 use App\Http\Controllers\VideoControllers;
 use GuzzleHttp\Middleware;
 
@@ -33,8 +34,13 @@ Route::post('/logout',[LoginController::class,'logout']);
 Route::get('/change-password',[UserControllers::class,'ChangePassword'])->middleware('auth');;
 Route::post('/change-password',[UserControllers::class,'ProsesChangePassword'])->middleware('auth');
 
-Route::get('/profile',[UserControllers::class,'toProfile','index','updateImage','updateimagee'])->middleware('auth');
 
+// Route::get('/profile',[UserControllers::class,'toProfile','index','updateImage'])->name('main-interface.profile')->middleware('auth');
+// Route::get('/profile',[Profilep::class,'index','update'])->name('main-interface.profile')->middleware('auth');
+Route::get('/profile', [UserControllers::class, 'toProfile'])->middleware('auth')->name('user.profile');
+Route::post('/profile/update-image/{user}', [UserControllers::class, 'updateImage'])->middleware('auth')->name('user.updateImage');
+
+Route::get('/search', [UserControllers::class, 'search'])->name('search');
 Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth');
 //Route::resource('/dasboard/user',UserControllers::class)->except('show'); itu kecuali show ya
 

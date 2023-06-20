@@ -50,6 +50,55 @@ $(document).ready(function(){
       } else {
         $(".time").html("Selamat Malam");
       }
+
+    // Course-List Event
+// Select the element you want to animate
+$('.course-list').on('click',function(){
+    const element = $(this);
+    const arrow = element.find('#arrow');
+    if(element.hasClass('active')){
+        // Get the target height
+        element.animate({
+            height:'60px',
+            backgroundColor: 'blue',
+        },50);
+        element.removeClass('active')
+        arrow.removeClass('fa-caret-up')
+        arrow.addClass('fa-caret-down')      
+      
+        // Apply transition properties
+        element.css({
+          'background': 'rgb(17,63,226)',
+          'background' : 'linear-gradient(124deg, rgba(17,63,226,1) 39%, rgba(0,168,255,1) 97%)',
+          'color':'white',
+          'font-weight': '700',
+          'letter-spacing':'1.5px',
+          'transition': 'all 1s ease'
+        });
+    }else {
+        element.addClass('active')
+        arrow.removeClass('fa-caret-down')
+        arrow.addClass('fa-caret-up')      
+      
+        // Get the target height
+        const targetHeight = element[0].scrollHeight;
+      
+        // Apply transition properties
+        element.css({
+          'height': targetHeight,
+          'background': 'white',
+          'color':'black',
+          'letter-spacing':'1px',
+          'font-weight': '700!important',
+          'transition': 'height 1s ease'
+        });
+      
+        // After the transition is complete, reset the height to "auto"
+        setTimeout(function() {
+          element.css('height', 'auto');
+        }, 1000); // Adjust the duration to match the transition duration
+    }
+})
 })
 
 function previewImage(){
@@ -64,9 +113,6 @@ function previewImage(){
     oFReader.onload = function(oFREvent){
         imgPreview.src = oFREvent.target.result;
     }
-    $('#simpan').on('click',function (e){
-        e.preventDefault();
-    })
 }
 // Button Animate
 const animate = (btnClass)=>{
