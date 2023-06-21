@@ -7,6 +7,7 @@
                 <div class="float-left">
                     <h2>CRUD User</h2>
                 </div>
+                
                 <div class="float-right">
                     <a class="btn btn-primary" href="{{ route('user.create') }}"> Input User</a>
                 </div>
@@ -18,10 +19,12 @@
             <p>{{ $message }}</p>
         </div>
         @endif
-    
+
+
         <form class="form" method="get" action="{{ route('search') }}">
-    <div class="form-group w-100 mb-3">
-        <input type="text" name="search" class="form-control w-75 d-inline" id="search" placeholder="Masukkan keyword Nim">
+        <div class="form-group w-100 mb-3">
+        <input type="text" name="search" class="form-control w-75 d-inline" id="search" placeholder="Masukkan keyword">
+
         <button type="submit" class="btn btn-primary mb-1">Cari</button>
     </div>
 </form>
@@ -33,7 +36,8 @@
                 <th>Nim</th>
                 <th class="text-center">Username</th>
                 <th class="text-center">Email</th>
-                {{-- <th width="150px"class="text-center">password</th> --}}
+                <th class="text-center">pin1</th>
+                <th class="text-center">pin2</th>
                 <th class="text-center">Action</th>
             </tr>
             @foreach ($user as $User)
@@ -53,7 +57,9 @@
                 <td>{{ $User->Nim }}</td>
                 <td>{{ $User->nama }}</td>
                 <td>{{ $User->email}}</td>
-                {{-- <td>{{ $User->password}}</td> --}}
+                <td>{{ $User->pin1}}</td>
+                <td>{{ $User->pin2}}</td>
+                
                 <td class="text-center">
                     <form action="{{ route('user.destroy',$User->id) }}" method="POST" class="d-flex column-gap-3 justify-content-center">
                         <a class="btn btn-primary btn-sm" href="{{ route('user.show',$User->id) }}" style="width: 70px">Show</a>

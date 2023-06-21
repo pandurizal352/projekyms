@@ -14,7 +14,10 @@
                 @csrf
                 <label for="image" class="upload-picture-btn"><i class="fa-solid fa-camera"></i></label>
                 <input type="file" id="image" onchange="previewImage()" class="form-control" name="image">
-                <button type="submit" class="btn btn-primary mt-3" id="simpan">Simpan</button>
+                <div class="container-simpan position-absolute" >
+                    <p>Apakah anda ingin menyimpan perubahan?</p>
+                    <button type="submit" class="btn" id="simpan">Simpan</button>
+                </div>
             </form>
         </div>
         <h2 class="greetings-1 blue-font fw-semibold">Halo, <span class="time"></span></h2>

@@ -15,11 +15,12 @@ class UserControllers extends Controller
     public function search(Request $request)
     {
         $cari = $request->search;
-        $user = User::where('nim', 'like', "%" . $cari . "%")->paginate(5);
-        return view('user.index',[
-            "title" => "search",
-            "user" => $user, 
-        ],compact('user'))->with('i', (request()->input('page', 1) - 1) * 5);
+        $user = User::where('nim', 'like', "%" . $cari . "%")->paginate(10);
+        return view('user.index', [
+            "title" => "User cari",
+            "user" => $user,
+        ],compact('user'))->with('i', (request()->input('page', 1) - 1) * 10);
+
     }
 
     public function updateImage(Request $request, User $user)
@@ -50,11 +51,11 @@ class UserControllers extends Controller
     }
     public function index()
     {   
-        $user = User::latest()->paginate(5);
+        $user = User::latest()->paginate(10);
         return view ('user.index',[
             "title" => "User CRUD",
             "user" => $user,
-        ],compact('user'))->with('i', (request()->input('page', 1) -1) * 5);
+        ],compact('user'))->with('i', (request()->input('page', 1) -1) * 10);
     }
     /**
      * Show the form for creating a new resource.
@@ -79,13 +80,15 @@ class UserControllers extends Controller
     {
        
         // return $request->file('image')->store('post-images');
-
+        
        $validatedData = $request->validate([
             'Nim' => 'required',
             'nama' => 'required',
             'email' => 'required',
             'password' => 'required',
             'image' => 'image|file|max:1024',
+            'pin1' => 'required',
+            'pin2' => 'required',
             'role' => 'required',
         ]);
         //memasukan gambar ke dlam file post-images
@@ -141,6 +144,8 @@ class UserControllers extends Controller
             'email' => 'required',
             'password' => 'required',
             'image' => 'image|file|max:1024',
+            'pin1' => 'required',
+            'pin2' => 'required',
             'role' => 'required',
         ]);
 

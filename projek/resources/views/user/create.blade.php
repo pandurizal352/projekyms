@@ -1,6 +1,9 @@
 @extends('layouts.main-layouts')
 
 @section('content')
+
+
+
 <main style="width:90%; margin:auto;">
     <div class="mt-5 mb-5">
         <div class="row margin-tb">
@@ -10,6 +13,7 @@
             <div class="col-md-6 d-flex justify-content-md-end align-items-center">
                 <a class="btn btn-secondary" href="{{ route('user.index') }}"> Kembali</a>
             </div>
+            
         </div>
     </div>
     
@@ -29,7 +33,7 @@
          <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Nim:</strong>
+                <label><i class="fa fa-id-card"></i> Nim</label>
                     <input type="text" name="Nim" class="form-control" placeholder="NIS SISWA">
                 </div>
             </div>
@@ -67,12 +71,29 @@
                 
             </div>
             </div>
-    
+
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-3">
+                <div class="form-group">
+                <label><i class="fa fa-code-fork"></i> Pin1</label>
+                <input type="text" name="pin1" class="form-control" placeholder="pin1" required="">
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-3">
+                <div class="form-group">
+                <label><i class="fa fa-code-fork"></i> Pin2</label>
+                <input type="text" name="pin2" class="form-control" placeholder="pin2" required="">
+                </div>
+            </div>
+
             <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 
                 <label><i class="fa fa-key"></i> Role</label>
-                <input type="text" name="role" class="form-control "   placeholder="role" required="">
+                <select id="cars" name="role" class="form-control " placeholder="role" required="">
+                    <option value="1">Admin</option>
+                    <option value="0">User</option>
+                </select>
             </div>
             </div>
     

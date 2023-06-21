@@ -11,6 +11,7 @@ class SiswaControllers extends Controller
     /**
      * Display a listing of the resource.
      */
+    
     public function index()
     {
         $sisw = Siswa::latest()->paginate(5);

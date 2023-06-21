@@ -256,17 +256,40 @@ body::-webkit-scrollbar-thumb {
     top: 2em;
     
 }
+#simpan {
+    background-image: linear-gradient(to right, #f9c817, #facd1c, #fbd120, #fcd625, #fddb29);   
+    color : white;
+    font-weight: 500;
+    width: 100px;
+}
+.container-simpan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    align-items: center;
+    background-color: white!important;
+    border-radius: 10px;
+    top: -10em;
+    padding: 20px;
+    box-shadow: -1px 20px 27px -3px rgba(0,0,0,0.46);
+    border-top: 2px solid var(--description-color);
+    text-align: center;
+    font-size: 15px;
+}
+
 #image {
     display: none;
 }
 .upload-picture-btn{
     cursor: pointer;
     position: absolute;
-    bottom: 3em;
+    bottom: 0em;
     right: 1em;
     background-color: rgba(0, 0, 0, 0.205);
     padding: 5px 10px 5px 10px;
     border-radius: 50%;
+    
 }
 #Footer {
     width: 95%;
