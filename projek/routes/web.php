@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\CheckPinMiddleware;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiswaControllers;  
 use App\Http\Controllers\UserControllers; 
@@ -41,7 +42,8 @@ Route::post('/profile/update-image/{user}', [UserControllers::class, 'updateImag
 
 
 Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth')->name('dashboard');
-Route::get('/dashboard/course-spm',[SpmController::class, 'index'])->name('dashboard.spm');
+Route::get('/dashboard/course-spm', [SpmController::class, 'index'])->middleware('checkpin')->name('dashboard.spm');
+
 Route::post('/dashboard/check-pin', [DashboardController::class, 'checkPin'])->name('dashboard.check_pin');
 //Route::resource('/dasboard/user',UserControllers::class)->except('show'); itu kecuali show ya
 
