@@ -26,7 +26,7 @@
             @endif
             <div class="welcome">Welcome</div>
             <h1 class="tagline">Pelajari, Investasi, Raih Kebebasan Finansial!</h1>
-            <p class="description">"Ungkap potensi keuntungan pasar saham dengan Yuk Melek Saham. Pelajari strategi, analisis, dan manajemen risiko untuk kebebasan finansial Anda."</p>
+            <p class="description">"Ungkap potensi keuntungan pasar saham dengan Jago Investasi. Pelajari strategi, analisis, dan manajemen risiko untuk kebebasan finansial Anda."</p>
             <p class="description">LogIn sekarang untuk akses modul pembelajaran!</p>
             <button class="btn-login mb-5 rounded fw-semibold">Join us!</button>
 

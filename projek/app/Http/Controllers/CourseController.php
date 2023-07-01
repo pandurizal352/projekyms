@@ -15,7 +15,6 @@ class CourseController extends Controller
      * Display a listing of the resource.
      */
 
-
     public function spm()
     {   
         $video = Video::all();
@@ -32,7 +31,6 @@ class CourseController extends Controller
             "title"=>"Course",
             "videos"=> $video2,
         ]);
-
     }
 
     /**

@@ -89,8 +89,8 @@ class UserControllers extends Controller
             'email' => 'required',
             'password' => 'required',
             'image' => 'image|file|max:1024',
-            'pin1' => 'required',
-            'pin2' => 'required',
+            'pin1' => 'nullable',
+            'pin2' => 'nullable',
             'role' => 'required',
         ]);
         //memasukan gambar ke dlam file post-images

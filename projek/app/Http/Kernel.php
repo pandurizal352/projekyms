@@ -46,6 +46,9 @@ class Kernel extends HttpKernel
         'checkpin' => [
             \App\Http\Middleware\CheckPinMiddleware::class,
         ],
+        'checkpin2' => [
+            \App\Http\Middleware\CheckPinMiddleware2::class,
+        ],
     ];
 
     /**

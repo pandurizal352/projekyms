@@ -29,7 +29,7 @@
             <div class="row d-flex column-gap-4 row-gap-0 justify-content-center">
                 <div class="col-md">
                     <img src="/images/logo.png" alt="Company Logo" style="width:5em;">
-                    <p class="blue-font"><strong>Gallery Investasi UHAMKA.</strong></p>
+                    <p class="blue-font"><strong>GIS UHAMKA.</strong></p>
                     <p> Jl. Raya Bogor KM.23 No.99, RT.4/RW.5, Rambutan, Kec. Ciracas, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13830</p>
                     <p>Jakarta, Indonesia</p>
                     <p></p>
