@@ -49,10 +49,6 @@ Route::get('/dashboard/course-spm', [CourseController::class, 'spm'])->middlewar
 Route::get('/dashboard/kelas-investasi', [CourseController::class, 'kelas_investasi'])->middleware('checkpin2')->name('dashboard.kelas_investasi');
 
 Route::post('/dashboard/check-pin', [DashboardController::class, 'checkPin'])->name('dashboard.check_pin');
-<<<<<<< HEAD
-
-=======
 Route::post('/dashboard/check-pin2', [DashboardController::class, 'checkPin2'])->name('dashboard.check_pin2');
->>>>>>> a706b64 (last update)
 //Route::resource('/dasboard/user',UserControllers::class)->except('show'); itu kecuali show ya
 
