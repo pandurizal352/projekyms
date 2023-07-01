@@ -20,6 +20,7 @@ class UserControllers extends Controller
             "title" => "User cari",
             "user" => $user,
         ],compact('user'))->with('i', (request()->input('page', 1) - 1) * 10);
+
     }
 
     public function updateImage(Request $request, User $user)
@@ -88,6 +89,8 @@ class UserControllers extends Controller
             'email' => 'required',
             'password' => 'required',
             'image' => 'image|file|max:1024',
+            'pin1' => 'required',
+            'pin2' => 'required',
             'role' => 'required',
         ]);
         //memasukan gambar ke dlam file post-images
@@ -143,6 +146,8 @@ class UserControllers extends Controller
             'email' => 'required',
             'password' => 'required',
             'image' => 'image|file|max:1024',
+            'pin1' => 'required',
+            'pin2' => 'required',
             'role' => 'required',
         ]);
 

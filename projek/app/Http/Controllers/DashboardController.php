@@ -16,6 +16,7 @@ class DashboardController extends Controller
             "videos"=> $video,
         ]);
     }
+    
     public function checkPin(Request $request)
     {
         $user = Auth::user();
@@ -25,5 +26,7 @@ class DashboardController extends Controller
             return back()->withErrors(['Pin yang Anda masukkan salah.']);
         }
     }
-
+    
+ 
+    
 }

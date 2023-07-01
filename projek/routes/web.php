@@ -44,6 +44,7 @@ Route::get('/profile', [UserControllers::class, 'toProfile'])->middleware('auth'
 Route::post('/profile/update-image/{user}', [UserControllers::class, 'updateImage'])->middleware('auth')->name('user.updateImage');
 
 
+
 Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth')->name('dashboard');
 Route::get('/dashboard/course-spm', [SpmController::class, 'index'])->middleware('checkpin')->name('dashboard.spm');
 

@@ -14,6 +14,8 @@ class SpmController extends Controller
 
     public function index()
     {
+        $this->authorize('pin1ya');
+        
         return view('main-interface.course-spm');
     }
 

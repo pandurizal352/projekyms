@@ -71,6 +71,20 @@
                         <input type="password" class="form-control"  name="password"  value="" placeholder="Content"></textarea>
                     </div>
                 </div>
+                
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-3">
+                    <div class="form-group">
+                        <strong>Pin1</strong>
+                        <input type="text" name="pin1" value="{{ $user->pin1}}" class="form-control" placeholder="kode pin1">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-3">
+                    <div class="form-group">
+                        <strong>Pin2</strong>
+                        <input type="text" name="pin2" value="{{ $user->pin2}}" class="form-control" placeholder="kode pin2">
+                    </div>
+                </div>
+
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Role</strong>
