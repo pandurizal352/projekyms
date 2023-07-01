@@ -4,19 +4,35 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use App\Models\video;
+use App\Models\Video2;
 
 
-class SpmController extends Controller
+
+class CourseController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
 
-    public function index()
-    {
-        $this->authorize('pin1ya');
-        
-        return view('main-interface.course-spm');
+
+    public function spm()
+    {   
+        $video = Video::all();
+        return view('main-interface.course-spm',[
+            "title"=> "Course",
+            "videos"=> $video
+
+        ]);
+    }
+    public function kelas_investasi()
+    {    
+        $video2 = Video2::all();
+        return view('main-interface.course-kelas_investasi',[
+            "title"=>"Course",
+            "videos"=> $video2,
+        ]);
+
     }
 
     /**

@@ -2182,6 +2182,11 @@
 #8 D:\\Coding Project\\projekyms\\projek\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('D:\\\\Coding Proje...')
 #9 {main}
 "} 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 918bd04 (revert last update)
 [2023-06-20 12:30:19] local.ERROR: Object of type App\Http\Middleware\pinNya is not callable {"userId":9,"exception":"[object] (Error(code: 0): Object of type App\\Http\\Middleware\\pinNya is not callable at C:\\xampp\\htdocs\\projekyms\\projek\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php:181)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\projekyms\\projek\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
@@ -3770,3 +3775,7 @@
 #64 C:\\xampp\\htdocs\\projekyms\\projek\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\xampp\\\\htdocs...')
 #65 {main}
 "} 
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 8f4075f (last update)
+>>>>>>> 918bd04 (revert last update)
