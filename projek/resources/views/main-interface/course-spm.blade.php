@@ -20,6 +20,7 @@
                         {{$video->article}}
                     </article>
                 </div>
+            
             @endforeach
         </div>
     </div>

@@ -40,6 +40,7 @@
         </div>
       </div>    
     </div>
+    
     <div class="login-container position-absolute top-50 start-50 translate-middle bg-light rounded-2">
       <i class="fa-regular fa-circle-xmark"></i>
       <form action="/"  method="post" class="d-flex flex-column justify-content-center p-5 mt-5">

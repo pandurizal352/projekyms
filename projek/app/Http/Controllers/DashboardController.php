@@ -23,8 +23,6 @@ class DashboardController extends Controller
             return back()->with('pinError','Pin yang anda masukkan salah');
         }
     }
-<<<<<<< HEAD
-=======
     public function checkPin2(Request $request)
     {
         $user = Auth::user();
@@ -34,7 +32,6 @@ class DashboardController extends Controller
             return back()->with('pin2Error','Pin yang anda masukkan salah');
         }
     }
->>>>>>> a706b64 (last update)
     
  
     
